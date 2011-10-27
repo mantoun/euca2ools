@@ -220,7 +220,7 @@ class InstallImage(AWSQueryRequest):
                    break
             if image_found:
                 print "Downloading Image : ",image['description']
-                imageURL = self.ServiceClass.StoreBaseURL+image['url']
+                imageURL = self.eustore_url+image['url']
                 req = urllib2.urlopen(imageURL)
                 file_size = int(req.info()['Content-Length'])/1000
                 size_count = 0;
